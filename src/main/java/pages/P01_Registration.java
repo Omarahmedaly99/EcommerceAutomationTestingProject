@@ -15,7 +15,7 @@ public class P01_Registration extends PageBase
     private final By confirmPasswordTextBox = By.id("ConfirmPassword");
     private final By registerBtn = By.id("register-button");
     public By successMessage = By.cssSelector("div.result");
-    public By alreadyExists = By.xpath("//*[@id=\"main\"]/div/div/div/div[2]/form/div[1]/ul/li");
+    public By emailAlreadyExists = By.xpath("//li[text() = 'The specified email already exists']");
     public By InvalidEmail = By.id("Email-error");
     public By confirmPasswordDifference = By.id("ConfirmPassword-error");
     By companyName = By.id("Company");
