@@ -8,7 +8,7 @@ import pages.HomePage;
 public class T04_ContactUs extends TestBase
 {
     String fullName = "Omar Ahmed";
-    String email = "omarx4@mail.com";
+    String email = "omar4@mail.com";
     String enquiry = "I have a problem ordering a product";
     HomePage homeObject;
     P04_ContactUs contactUsObject;

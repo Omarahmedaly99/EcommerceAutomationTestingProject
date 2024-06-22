@@ -11,12 +11,12 @@ public class T01_Registration extends TestBase
     HomePage homeObject ;
     String firstName ="Omar";
     String lastName = "Ahmed";
-    String email = "omarx1@gmail.com";
+    String email = "omar1@gmail.com";
     String companyName = "nopCommerce";
     String password = "123456";
     String confirmPassword = "123456";
     String invalidEmail = "omar009.com";
-    String newEmail = "testx1@gmail.com";
+    String newEmail = "test1@gmail.com";
     String confirmPasswordDifference = "Omar$";
     P01_Registration registerObject ;
     @BeforeMethod

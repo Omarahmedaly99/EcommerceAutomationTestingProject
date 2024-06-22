@@ -13,7 +13,7 @@ public class T02_Login extends TestBase
     P02_Login loginObject ;
     String firstName = "Omar";
     String lastName = "Ahmed";
-    String email = "omarx2@gmail.com";
+    String email = "omar2@gmail.com";
     String companyName = "nopCommerce";
     String password = "123456";
     String confirmPassword = "123456";

@@ -17,7 +17,7 @@ public class T010_EmailFriend extends TestBase
     String producrtName = "Apple MacBook Pro 13-inch";
     String firstName ="Omar";
     String lastName = "Ahmed";
-    String email = "omarx10@gmail.com";
+    String email = "omar10@gmail.com";
     String companyName = "npCommerce";
     String companyFriendName = "nopCommerce2";
     String password = "123456";
