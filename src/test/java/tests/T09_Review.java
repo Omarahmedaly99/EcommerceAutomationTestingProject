@@ -18,7 +18,7 @@ public class T09_Review extends TestBase
     String productName = "Apple MacBook Pro 13-inch";
     String firstName = "Omar";
     String lastName = "Ahmed";
-    String email = "omar9@gmail.com";
+    String email = "omarx9@gmail.com";
     String companyName = "nopCommerce";
     String password = "123456";
     String confirmPassword = "123456";

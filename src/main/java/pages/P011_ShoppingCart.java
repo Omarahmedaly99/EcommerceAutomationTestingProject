@@ -9,18 +9,18 @@ public class P011_ShoppingCart extends PageBase
     {
         this.driver = driver;
     }
-    private final By continueShopping = By.xpath("//*[@id=\"shopping-cart-form\"]/div[2]/div[1]/button[2]");
+    private final By continueShopping = By.xpath("//button[@class=\"button-2 continue-shopping-button\"]");
     private final By estimateShipping = By.id("open-estimate-shipping-popup");
-    private final By removeProductFromCart = By.xpath("//*[@id=\"shopping-cart-form\"]/div[1]/table/tbody/tr/td[7]/button");
+    private final By removeProductFromCart = By.xpath("//button[@class=\"remove-btn\"]");
     private final By giftWrapping = By.id("checkout_attribute_1");
-    private final By quantityUp = By.cssSelector("div.quantity.up");
-    private final By quantityDown = By.cssSelector("div.quantity.down");
+    private final By quantityUp = By.xpath("//div[@class=\"quantity up\"]");
+    private final By quantityDown = By.xpath("//div[@class=\"quantity down\"]");
     private final By countrySelect = By.id("CountryId");
     private final By zipPostalCode = By.id("ZipPostalCode");
-    private final By ground = By.xpath("//*[@id=\"estimate-shipping-popup\"]/div[4]/div[2]/div[1]/div[2]");
-    private final By clickApply = By.xpath("//*[@id=\"estimate-shipping-popup\"]/div[5]/button");
-    public By productNameFromCart = By.xpath("//*[@id=\"shopping-cart-form\"]/div[1]/table/tbody/tr/td[3]/a");
-    public By yourShoppingCartIsEmptyMsg = By.cssSelector("div.no-data");
+    private final By ground = By.xpath("//div[@class=\"estimate-shipping-row-item shipping-item\"]");
+    private final By clickApply = By.xpath("//button[@class=\"button-2 apply-shipping-button\"]");
+    public By productNameFromCart = By.xpath("//a[@class=\"product-name\"]");
+    public By yourShoppingCartIsEmptyMsg = By.xpath("//div[@class=\"no-data\"]");
     private final By termsOfService = By.id("termsofservice");
     private final By clickCheckout = By.id("checkout");
     public void quantityUpOrDownAndChangeGiftWrapping()

@@ -11,7 +11,7 @@ public class P04_ContactUs extends PageBase
     private final By fullNameTextBox = By.id("FullName");
     private final By emailTextBox = By.id("Email");
     private final By enquiryTextBox = By.id("Enquiry");
-    private final By submitBtn = By.xpath("//*[@id=\"main\"]/div/div/div/div[2]/form/div[2]/button");
+    private final By submitBtn = By.xpath("//button[@class=\"button-1 contact-us-button\"]");
     public By successMessage = By.cssSelector("div.result");
     public void ContactUs(String fullName,String email,String enquiry)
     {

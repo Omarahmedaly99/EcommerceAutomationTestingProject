@@ -9,18 +9,18 @@ public class P06_ProductDetails extends PageBase
         this.driver = driver;
     }
     public By productNameBreadCrumb = By.cssSelector("strong.current-item");
-    public By emailAFriend = By.xpath("//*[@id=\"product-details-form\"]/div/div[1]/div[2]/div[9]/div[3]/button");
+    public By emailAFriendBtn = By.xpath("//button[@class=\"button-2 email-a-friend-button\"]");
     public By productPriceLabel = By.id("price-value-4");
     public By AddYourReview = By.linkText("Add your review");
     private final By addWishListBtn = By.id("add-to-wishlist-button-4");
     private final By clickWishList = By.linkText("wishlist");
-    private final By addToCompareBtn = By.xpath("//*[@id=\"product-details-form\"]/div/div[1]/div[2]/div[8]/div[2]/button");
-    private final By clickProductCompare = By.xpath("//*[@id=\"bar-notification\"]/div/p/a");
+    private final By addToCompareBtn = By.xpath("//button[@class=\"button-2 add-to-compare-list-button\"]");
+    private final By clickProductCompare = By.xpath("//a[@href=\"/compareproducts\"]");
     private final By addToCartBtn = By.id("add-to-cart-button-4");
     private final By clickShoppingCart = By.linkText("shopping cart");
     public void clickEmailAFriend()
     {
-        clickButton(emailAFriend);
+        clickButton(emailAFriendBtn);
     }
     public void clickAddReview()
     {

@@ -11,9 +11,9 @@ public class P010_Compare extends PageBase
     {
         this.driver = driver;
     }
-    private final By clearListBtn = By.xpath("//*[@id=\"main\"]/div/div[2]/div/div[2]/a");
-    public By YouHaveNoItemsToCompare = By.cssSelector("div.no-data");
-    private final By compareTable = By.cssSelector("table.compare-products-table");
+    private final By clearListBtn = By.xpath("//a[@class=\"clear-list\"]");
+    public By YouHaveNoItemsToCompare = By.xpath("//div[@class=\"no-data\"]");
+    private final By compareTable = By.xpath("//table[@class=\"compare-products-table\"]");
     public By allRows = By.tagName("tr");
     public By allCol = By.tagName("td");
     public By firstProduct = By.linkText("Asus N551JK-XO076H Laptop");

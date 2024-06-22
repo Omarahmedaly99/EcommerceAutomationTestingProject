@@ -13,7 +13,7 @@ public class T02_Login extends TestBase
     P02_Login loginObject ;
     String firstName = "Omar";
     String lastName = "Ahmed";
-    String email = "omar2@gmail.com";
+    String email = "omarx2@gmail.com";
     String companyName = "nopCommerce";
     String password = "123456";
     String confirmPassword = "123456";
@@ -35,7 +35,7 @@ public class T02_Login extends TestBase
         loginObject = new P02_Login(driver);
     }
     @Test(priority = 1)
-    public void LoginValid()
+    public void ValidLogin()
     {
         loginObject.UserLogin(email,password);
         homeObject.clickLogout();
@@ -43,38 +43,38 @@ public class T02_Login extends TestBase
                 .contains("My account"));
     }
     @Test(priority = 2)
-    public void LoginEmpty()
+    public void EmptyLogin()
     {
         loginObject.UserLogin("","");
-        Assert.assertTrue(driver.findElement(homeObject.emptyEmail).getText()
+        Assert.assertTrue(driver.findElement(loginObject.emptyEmail).getText()
                 .contains("Please enter your email"));
     }
     @Test(priority = 3)
-    public void EmailInValidAndPasswordValid()
+    public void ValidEmailInAndValidPassword()
     {
         loginObject.UserLogin("omar.com",password);
-        Assert.assertTrue(driver.findElement(homeObject.emailError).getText()
+        Assert.assertTrue(driver.findElement(loginObject.emailError).getText()
                 .contains("Please enter a valid email address."));
     }
     @Test(priority = 4)
-    public void EmailValidAndPasswordInValid()
+    public void ValidEmailAndInValidPassword()
     {
         loginObject.UserLogin(email,"....@45");
-        Assert.assertTrue(driver.findElement(homeObject.passwordError).getText()
+        Assert.assertTrue(driver.findElement(loginObject.passwordError).getText()
                 .contains("Login was unsuccessful."));
     }
     @Test(priority = 5)
     public void LoginWithoutEnteringEmail()
     {
         loginObject.UserLogin("",password);
-        Assert.assertTrue(driver.findElement(homeObject.emptyEmail).getText()
+        Assert.assertTrue(driver.findElement(loginObject.emptyEmail).getText()
                 .contains("Please enter your email"));
     }
     @Test(priority = 6)
     public void LoginWithoutEnteringPassword()
     {
         loginObject.UserLogin(email,"");
-        Assert.assertTrue(driver.findElement(homeObject.passwordError).getText()
+        Assert.assertTrue(driver.findElement(loginObject.passwordError).getText()
                 .contains("Login was unsuccessful."));
     }
 }

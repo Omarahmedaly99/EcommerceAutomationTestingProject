@@ -13,7 +13,7 @@ public class T03_MyAccount extends TestBase{
     P03_MyAccount myAccountObject;
     String firstName ="Omar";
     String lastName = "Ahmed";
-    String email = "omar3@gmail.com";
+    String email = "omarx3@gmail.com";
     String companyName = "nopCommerce";
     String oldPassword = "123456";
     String confirmOldPassword = "123456";

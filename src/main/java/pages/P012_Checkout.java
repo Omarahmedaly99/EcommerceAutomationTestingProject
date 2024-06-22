@@ -16,23 +16,23 @@ public class P012_Checkout extends PageBase
     private final By BillingNewAddressZipPostalCode = By.id("BillingNewAddress_ZipPostalCode");
     private final By BillingNewAddressPhoneNumber = By.id("BillingNewAddress_PhoneNumber");
     private final By BillingNewAddressFaxNumber = By.id("BillingNewAddress_FaxNumber");
-    private final By continueBtnBillingAddress = By.xpath("//*[@id=\"billing-buttons-container\"]/button[2]");
-    private final By continueBtnShippingMethod = By.xpath("//*[@id=\"shipping-method-buttons-container\"]/button");
+    private final By continueBtnBillingAddress = By.xpath("//button[@class=\"button-1 new-address-next-step-button\"]");
+    private final By continueBtnShippingMethod = By.xpath("//button[@class=\"button-1 shipping-method-next-step-button\"]");
     private final By moneyOrder = By.id("paymentmethod_0");
     private final By creditCard = By.id("paymentmethod_1");
-    private final By continuePaymentMethod =  By.xpath("//*[@id=\"payment-method-buttons-container\"]/button");
-    private final By continuePaymentInformationMoneyOrder = By.xpath("//*[@id=\"payment-info-buttons-container\"]/button");
+    private final By continuePaymentMethod =  By.xpath("//button[@class=\"button-1 payment-method-next-step-button\"]");
+    private final By continuePaymentInformationMoneyOrder = By.xpath("//button[@class=\"button-1 payment-info-next-step-button\"]");
     private final By creditCardType = By.id("CreditCardType");
     private final By cardholderName = By.id("CardholderName");
     private final By cardNumber = By.id("CardNumber");
     private final By expireMonth = By.id("ExpireMonth");
     private final By expireYear = By.id("ExpireYear");
     private final By cardCode = By.id("CardCode");
-    private final By confirmOrder = By.xpath("//*[@id=\"confirm-order-buttons-container\"]/button");
+    private final By confirmOrder = By.xpath("//button[@class=\"button-1 confirm-order-next-step-button\"]");
     private final By clickHereForOrderDetails = By.linkText("Click here for order details.");
     private final By print = By.linkText("Print");
     private final By PDF = By.linkText("PDF Invoice");
-    private final By reOrder = By.xpath("//*[@id=\"main\"]/div/div/div/div[2]/div[5]/div[2]/button");
+    private final By reOrder = By.xpath("//button[@class=\"button-1 re-order-button\"]");
     public void billingAddress()
     {
         waitForElementWithLocatorToBeVisible(driver,BillingNewAddressCountryId);

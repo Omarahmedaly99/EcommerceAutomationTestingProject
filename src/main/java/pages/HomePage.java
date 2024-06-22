@@ -13,23 +13,20 @@ public class HomePage extends PageBase {
         jse = (JavascriptExecutor) driver;
         actions = new Actions(driver);
     }
-    private final By clickLogo = By.xpath("/html/body/div[6]/div[1]/div[2]/div[1]/a/img");
+    private final By clickLogo = By.xpath("//img[@alt=\"nopCommerce demo store\"]");
     private final By registerLink = By.linkText("Register");
     private final By loginLink = By.linkText("Log in");
     public By logoutLink = By.linkText("Log out") ;
     public By myAccountLink = By.linkText("My account");
     private final By contactUsLink = By.linkText("Contact us");
     private final By currencydrl = By.id("customerCurrency");
-    private final By computersMenu = By.xpath("/html/body/div[6]/div[2]/ul[1]/li[1]/a");
-    private final By desktops = By.xpath("/html/body/div[6]/div[2]/ul[1]/li[1]/ul/li[1]/a");
-    public By desktopsText = By.xpath("//*[@id=\"main\"]/div/div[3]/div/div[1]/h1");
-    private final By notebooks = By.xpath("/html/body/div[6]/div[2]/ul[1]/li[1]/ul/li[2]/a");
-    public By notebooksText = By.xpath("//*[@id=\"main\"]/div/div[3]/div/div[1]/h1");
-    private final By software = By.xpath("/html/body/div[6]/div[2]/ul[1]/li[1]/ul/li[3]/a");
-    public By softwareText = By.xpath("//*[@id=\"main\"]/div/div[3]/div/div[1]/h1");
-    public By emailError = By.id("Email-error");
-    public By passwordError = By.xpath("//*[@id=\"main\"]/div/div/div/div[2]/div[1]/div[2]/form/div[1]");
-    public By emptyEmail = By.cssSelector("span.field-validation-error");
+    private final By computersMenu = By.xpath("//a[@href=\"/computers\"]");
+    private final By desktops = By.xpath("//a[@href=\"/desktops\"]");
+    public By desktopsText = By.xpath("//h1[text() = 'Desktops']");
+    private final By notebooks = By.xpath("//a[@href=\"/notebooks\"]");
+    public By notebooksText = By.xpath("//h1[text() = 'Notebooks']");
+    private final By software = By.xpath("//a[@href=\"/software\"]");
+    public By softwareText = By.xpath("//h1[text() = 'Software']");
     public void clickLogo()
     {
         clickButton(clickLogo);

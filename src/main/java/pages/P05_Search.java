@@ -9,7 +9,7 @@ public class P05_Search extends PageBase
         this.driver = driver;
     }
     private final By searchTextBox = By.id("small-searchterms");
-    private final By searchBtn = By.xpath("//*[@id=\"small-search-box-form\"]/button");
+    private final By searchBtn = By.xpath("//button[@class=\"button-1 search-box-button\"]");
     private final By productList = By.id("ui-id-1");
     private final By productTitle = By.linkText("Apple MacBook Pro 13-inch");
     public void productSearch(String productName)

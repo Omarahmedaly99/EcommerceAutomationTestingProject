@@ -20,7 +20,7 @@ public class T014_Checkout extends TestBase
     P012_Checkout checkoutObject;
     String firstName ="Omar";
     String lastName = "Ahmed";
-    String email = "omar14@gmail.com";
+    String email = "omarx14@gmail.com";
     String companyName = "NopCommerce";
     String password = "123456";
     String confirmPassword = "123456";

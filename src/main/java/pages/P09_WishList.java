@@ -10,12 +10,12 @@ public class P09_WishList extends PageBase
     }
     public By productCell = By.cssSelector("td.product");
     public By wishlistHeader = By.cssSelector("h1");
-    private final By addToCartCheckbox = By.xpath("//*[@id=\"main\"]/div/div/div/div[2]/div[1]/form/div[1]/table/tbody/tr/td[1]/input");
-    private final By qty = By.xpath("//*[@id=\"main\"]/div/div/div/div[2]/div[1]/form/div[1]/table/tbody/tr/td[6]/input");
-    private final By addToCartBtn = By.xpath("//*[@id=\"main\"]/div/div/div/div[2]/div[1]/form/div[2]/button[2]");
-    private final By removeBtn = By.cssSelector("button.remove-btn");
+    private final By addToCartCheckbox = By.xpath("//input[@name=\"addtocart\"]");
+    private final By qty = By.xpath("//input[@class=\"qty-input\"]");
+    private final By addToCartBtn = By.xpath("//button[@class=\"button-2 wishlist-add-to-cart-button\"]");
+    private final By removeBtn = By.xpath("//button[@class=\"remove-btn\"]");
     private final By updateCart = By.id("updatecart");
-    public By wishlistIsEmpty = By.cssSelector("div.no-data");
+    public By wishlistIsEmpty = By.xpath("//div[@class=\"no-data\"]");
     public void removeProductFromWishList()
     {
         waitForElementWithLocatorToBeVisible(driver,removeBtn);

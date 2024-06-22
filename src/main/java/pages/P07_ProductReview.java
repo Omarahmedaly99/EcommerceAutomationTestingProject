@@ -12,8 +12,8 @@ public class P07_ProductReview extends PageBase
     private final By reviewTextBox = By.id("AddProductReview_ReviewText");
     private final By ratingBtn = By.id("addproductrating_3");
     private final By submit = By.id("add-review");
-    public By reviewNotification = By.xpath("//*[@id=\"bar-notification\"]/div/p");
-    private final By closeNotification = By.cssSelector("span.close");
+    public By reviewNotification = By.xpath("//p[@class=\"content\"]");
+    private final By closeNotification = By.xpath("//span[@class=\"close\"]");
     public void AddProductReview(String reviewTitle,String reviewMessage)
     {
         setTextElementText(reviewTitleTextBox,reviewTitle);
