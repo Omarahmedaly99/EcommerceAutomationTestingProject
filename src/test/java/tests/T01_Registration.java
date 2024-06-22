@@ -1,6 +1,5 @@
 package tests;
 
-import org.apache.commons.lang3.RandomStringUtils;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -40,7 +39,7 @@ public class T01_Registration extends TestBase
     public void EmailAlreadyExists()
     {
         registerObject.UserRegistration(firstName,lastName,email,companyName,password,confirmPassword);
-        Assert.assertTrue(driver.findElement(registerObject.alreadyExists).getText()
+        Assert.assertTrue(driver.findElement(registerObject.emailAlreadyExists).getText()
                 .contains("The specified email already exists"));
     }
     @Test (priority = 3)

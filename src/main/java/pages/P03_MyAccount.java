@@ -13,8 +13,8 @@ public class P03_MyAccount extends PageBase
     private final By oldPasswordText = By.id("OldPassword");
     private final By newPasswordText = By.id("NewPassword");
     private final By confirmNewPasswordText = By.id("ConfirmNewPassword");
-    private final By changePasswordBtn = By.xpath("//*[@id=\"main\"]/div/div[2]/div/div[2]/form/div[2]/button");
-    public By passwordWasChanged = By.xpath("//*[@id=\"bar-notification\"]/div/p");
+    private final By changePasswordBtn = By.xpath("//button[@class=\"button-1 change-password-button\"]");
+    public By passwordWasChanged = By.xpath("//p[@class=\"content\"]");
     private final By addresses = By.linkText("Addresses");
     private final By fNameAddress = By.id("Address_FirstName");
     private final By lNameAddress = By.id("Address_LastName");
@@ -27,10 +27,9 @@ public class P03_MyAccount extends PageBase
     private final By zipPostalCode = By.id("Address_ZipPostalCode");
     private final By addressPhoneNumber = By.id("Address_PhoneNumber");
     private final By addressFaxNumber = By.id("Address_FaxNumber");
-    private final By save = By.xpath("//*[@id=\"main\"]/div/div[2]/form/div/div[2]/div[2]/button");
-    private final By closeNotification = By.xpath("//*[@id=\"bar-notification\"]/div/span");
-    private final By addNew = By.xpath("//*[@id=\"main\"]/div/div[2]/div/div[2]/div[2]/button");
-    public By ExitPasswordWasChanged = By.xpath("//*[@id=\"bar-notification\"]/div/span");
+    private final By addNew = By.xpath("//button[@class=\"button-1 add-address-button\"]");
+    private final By save = By.xpath("//button[@class=\"button-1 save-address-button\"]");
+    private final By closeNotification = By.xpath("//span[@class=\"close\"]");
     public void openChangePassword ()
     {
         clickButton(changePasswordLink);
@@ -41,7 +40,7 @@ public class P03_MyAccount extends PageBase
         setTextElementText(newPasswordText,newPassword);
         setTextElementText(confirmNewPasswordText,confirmNewPassword);
         clickButton(changePasswordBtn);
-        clickButton(ExitPasswordWasChanged);
+        clickButton(closeNotification);
     }
     public void addAddresses(String fName,String lName,String email,
                           String company,String city,String address1,String address2,

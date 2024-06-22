@@ -10,7 +10,7 @@ public class P02_Login extends PageBase
     }
     private final By emailTextBox = By.id("Email");
     private final By passwordTextBox = By.id("Password");
-    private final By loginBtn = By.xpath("//*[@id=\"main\"]/div/div/div/div[2]/div[1]/div[2]/form/div[3]/button");
+    private final By loginBtn = By.xpath("//button[@class=\"button-1 login-button\"]");
     public void UserLogin(String email,String password)
     {
         setTextElementText(emailTextBox,email);
