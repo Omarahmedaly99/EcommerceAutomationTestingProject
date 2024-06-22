@@ -10,7 +10,7 @@ import java.time.Duration;
 
 public class PageBase
 {
-    protected WebDriver driver ;
+    public WebDriver driver ;
     public JavascriptExecutor jse;
     public Select select;
     public Actions actions;
